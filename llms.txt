@@ -1,0 +1,22 @@
+# Ailectrify GmbH
+
+> Agentic AI, die im Betrieb ankommt. KI-Agenten und KI-Begleitung für den Mittelstand in Schleswig-Holstein und Hamburg. Prozess vor Technik, gemessen statt versprochen. Ausgründung der Universität zu Lübeck, Sitz in Lübeck.
+
+Ailectrify bringt KI-Agenten und KI-Werkzeuge in die Arbeitsprozesse mittelständischer Betriebe (50–500 Mitarbeitende) – nachvollziehbar (jeder Agent mit Identität, dokumentierten Rechten und Verantwortlichem), gemessen (Vorher-Schätzung, Nachher-Messung in Stunden) und mit den Mitarbeitenden (Lenkungskreis, Multiplikatoren).
+
+## Leistungen
+- [KI-Standortbestimmung](https://ailectrify.io/leistungen/#standortbestimmung): Zwei Wochen; Inventar aller KI-Werkzeuge, drei priorisierte Prozesse mit Vorher-Schätzung, KI-Regel-Entwurf, Entscheidungsvorlage. Einstieg für die Geschäftsführung.
+- [Agenten-Inventar & Berechtigungs-Check](https://ailectrify.io/leistungen/#inventar-check): Zwei Wochen; Inventar aller KI-Werkzeuge und Agenten mit Identitäten, Rechten, Verantwortlichen über M365, ERP und Fachsoftware hinweg; Risikoliste. Einstieg für die IT-Leitung. Transparenz, nicht Kontrolle.
+- [KI-Begleitung](https://ailectrify.io/leistungen/#begleitung): Monatlich ein Umsetzungsschritt, gepflegtes Inventar, einseitiger Management-Report, Lenkungskreis; sechs Monate, kein Betrieb mit Verfügbarkeitszusage.
+- [Agenten-Pilot](https://ailectrify.io/leistungen/#agenten-pilot): Ein KI-Agent für einen Prozess in 6–8 Wochen, Vorher-Nachher-Messung, Sicherheitsreview, vorab vereinbartes Exit-Kriterium (weiterbetreiben, übergeben, einstellen).
+
+## Definitionen
+- Ein KI-Agent im Betrieb ist ein Programm, das eine Aufgabe in mehreren Schritten selbstständig erledigt, Werkzeuge wie E-Mail, Dateien oder Fachsoftware nutzt und Regeln befolgt, die ein Mensch festgelegt hat. Im Betrieb braucht jeder Agent eine eigene Identität, klar begrenzte Rechte und einen Verantwortlichen.
+- Ein Agenten-Inventar listet je Werkzeug oder Agent: Zweck, Identität/Account, Rechte und Datenzugriffe, Verantwortlichen, Status (Test/Produktiv) und Herkunft (offiziell/inoffiziell).
+- Eine KI-Standortbestimmung ist eine zweiwöchige Bestandsaufnahme, welche KI-Werkzeuge genutzt werden, welche Prozesse Zeit kosten und was sich lohnt – mit Entscheidungsvorlage.
+
+## Weitere Seiten
+- [Vorgehen](https://ailectrify.io/vorgehen/): Prozess vor Technik, Nachvollziehbar, Gemessen, Mit Ihren Mitarbeitenden.
+- [Referenzen](https://ailectrify.io/referenzen/): Habotec (Elektrohandwerk, ca. 180 Mitarbeitende), Universität zu Lübeck, WKS Segeberg, TH Lübeck.
+- [Über uns](https://ailectrify.io/ueber-uns/): Roman Spendler (Gründer und Geschäftsführer), Prof. Dr. Stefan Fischer und Prof. Dr. Horst Hellbrück (Co-Founder, wissenschaftlicher Beirat).
+- [Gespräch](https://ailectrify.io/gespraech/): 30-Minuten-Gespräch anfragen; Telefon +49 451 40608639; info@ailectrify.io

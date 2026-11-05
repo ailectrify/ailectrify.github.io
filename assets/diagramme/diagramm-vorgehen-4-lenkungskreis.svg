@@ -1,0 +1,21 @@
+<svg class="diagramm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 160" role="img" aria-label="Lenkungskreis aus drei Personen: Geschäftsführung, Bereich und Verantwortlicher. Darunter sechs Monate mit einem Monat Pause." font-family="'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace" font-size="11">
+<circle cx="175" cy="38" r="26" fill="none" stroke="var(--mensch,#B4552D)" stroke-width="1.5"/>
+<circle cx="210" cy="38" r="26" fill="none" stroke="var(--mensch,#B4552D)" stroke-width="1.5"/>
+<circle cx="245" cy="38" r="26" fill="none" stroke="var(--mensch,#B4552D)" stroke-width="1.5"/>
+<text x="210" y="88" fill="var(--mensch,#B4552D)" font-size="11" text-anchor="middle">GF · Bereich · Verantwortlicher</text>
+<rect x="14.0" y="108" width="50.9" height="28" fill="none" stroke="var(--linie,#D5DDE4)" stroke-width="1"/>
+<text x="39.4" y="126" fill="var(--tinte-2,#4C5D6C)" font-size="11" text-anchor="middle">M1</text>
+<rect x="70.9" y="108" width="50.9" height="28" fill="none" stroke="var(--linie,#D5DDE4)" stroke-width="1"/>
+<text x="96.3" y="126" fill="var(--tinte-2,#4C5D6C)" font-size="11" text-anchor="middle">M2</text>
+<rect x="127.7" y="108" width="50.9" height="28" fill="none" stroke="var(--linie,#D5DDE4)" stroke-width="1"/>
+<text x="153.1" y="126" fill="var(--tinte-2,#4C5D6C)" font-size="11" text-anchor="middle">M3</text>
+<rect x="184.6" y="108" width="50.9" height="28" fill="none" stroke="var(--mensch,#B4552D)" stroke-width="1"/>
+<text x="210.0" y="126" fill="var(--mensch,#B4552D)" font-size="10" text-anchor="middle" letter-spacing="0.5">PAUSE</text>
+<rect x="241.4" y="108" width="50.9" height="28" fill="none" stroke="var(--linie,#D5DDE4)" stroke-width="1"/>
+<text x="266.9" y="126" fill="var(--tinte-2,#4C5D6C)" font-size="11" text-anchor="middle">M4</text>
+<rect x="298.3" y="108" width="50.9" height="28" fill="none" stroke="var(--linie,#D5DDE4)" stroke-width="1"/>
+<text x="323.7" y="126" fill="var(--tinte-2,#4C5D6C)" font-size="11" text-anchor="middle">M5</text>
+<rect x="355.1" y="108" width="50.9" height="28" fill="none" stroke="var(--linie,#D5DDE4)" stroke-width="1"/>
+<text x="380.6" y="126" fill="var(--tinte-2,#4C5D6C)" font-size="11" text-anchor="middle">M6</text>
+<text x="14" y="154" fill="var(--tinte-2,#4C5D6C)" font-size="10">Monatstakt mit einem Monat Pause</text>
+</svg>

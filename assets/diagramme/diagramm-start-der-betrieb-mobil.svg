@@ -1,0 +1,21 @@
+<svg class="diagramm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 358 320" role="img" aria-label="Zwei KI-Agenten mit eigener Identität und dokumentierten Rechten auf ERP, M365 und Nextcloud sowie Fachsoftware. Ein verantwortlicher Mensch steht hinter beiden. Test und Produktiv sind getrennt." font-family="'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace" font-size="11">
+<circle cx="179" cy="26" r="14" fill="none" stroke="var(--mensch,#B4552D)" stroke-width="1.5"/>
+<text x="200" y="30" fill="var(--mensch,#B4552D)" font-size="11">Verantwortlich</text>
+<path d="M179 40 V54 M89 54 H269 M89 54 V70 M269 54 V70" fill="none" stroke="var(--mensch,#B4552D)" stroke-width="1.5"/>
+<rect x="14" y="70" width="150" height="36" rx="4" fill="var(--flaeche-3,#E6ECF1)" stroke="var(--marke,#0077B7)" stroke-width="1.5"/><text x="24" y="92.0" fill="var(--marke,#0077B7)" font-size="12">Agent-01 Angebot</text>
+<rect x="194" y="70" width="150" height="36" rx="4" fill="var(--flaeche-3,#E6ECF1)" stroke="var(--marke,#0077B7)" stroke-width="1.5"/><text x="204" y="92.0" fill="var(--marke,#0077B7)" font-size="12">Agent-02 QM-Doku</text>
+<path d="M14 160 H344" fill="none" stroke="var(--linie,#D5DDE4)" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="14" y="153" fill="var(--tinte-2,#4C5D6C)" font-size="11">TEST</text>
+<text x="14" y="174" fill="var(--tinte-2,#4C5D6C)" font-size="11">PRODUKTIV</text>
+<rect x="14" y="262" width="108" height="44" fill="none" stroke="var(--tinte-2,#4C5D6C)" stroke-width="1.5"/><text x="24" y="278" fill="var(--tinte-2,#4C5D6C)" font-size="11">ERP</text>
+<rect x="131" y="262" width="108" height="44" fill="none" stroke="var(--tinte-2,#4C5D6C)" stroke-width="1.5"/><text x="141" y="278" fill="var(--tinte-2,#4C5D6C)" font-size="11">M365/Nextcloud</text>
+<rect x="248" y="262" width="96" height="44" fill="none" stroke="var(--tinte-2,#4C5D6C)" stroke-width="1.5"/><text x="258" y="278" fill="var(--tinte-2,#4C5D6C)" font-size="11">Fachsoftware</text>
+<path d="M88 106 V224" fill="none" stroke="var(--marke,#0077B7)" stroke-width="1.5" stroke-dasharray="4 4"/><path d="M84 218 L88 224 L92 218" fill="none" stroke="var(--marke,#0077B7)" stroke-width="1.5"/><rect x="82" y="238" width="12" height="10" rx="1.5" fill="none" stroke="var(--marke,#0077B7)" stroke-width="1.5"/><path d="M84.5 238 V234.5 a3.5 3.5 0 0 1 7 0 V236" fill="none" stroke="var(--marke,#0077B7)" stroke-width="1.5"/>
+<path d="M150 106 V224" fill="none" stroke="var(--marke,#0077B7)" stroke-width="1.5" stroke-dasharray="4 4"/><path d="M146 218 L150 224 L154 218" fill="none" stroke="var(--marke,#0077B7)" stroke-width="1.5"/><path d="M146 210 L150 216 L154 210" fill="none" stroke="var(--marke,#0077B7)" stroke-width="1.5"/><rect x="144" y="238" width="12" height="10" rx="1.5" fill="none" stroke="var(--marke,#0077B7)" stroke-width="1.5"/><path d="M146.5 238 V234.5 a3.5 3.5 0 0 1 7 0 V236" fill="none" stroke="var(--marke,#0077B7)" stroke-width="1.5"/>
+<path d="M220 106 V224" fill="none" stroke="var(--marke,#0077B7)" stroke-width="1.5" stroke-dasharray="4 4"/><path d="M216 218 L220 224 L224 218" fill="none" stroke="var(--marke,#0077B7)" stroke-width="1.5"/><path d="M216 210 L220 216 L224 210" fill="none" stroke="var(--marke,#0077B7)" stroke-width="1.5"/><rect x="214" y="238" width="12" height="10" rx="1.5" fill="none" stroke="var(--marke,#0077B7)" stroke-width="1.5"/><path d="M216.5 238 V234.5 a3.5 3.5 0 0 1 7 0 V236" fill="none" stroke="var(--marke,#0077B7)" stroke-width="1.5"/>
+<path d="M290 106 V224" fill="none" stroke="var(--marke,#0077B7)" stroke-width="1.5" stroke-dasharray="4 4"/><path d="M286 218 L290 224 L294 218" fill="none" stroke="var(--marke,#0077B7)" stroke-width="1.5"/><rect x="284" y="238" width="12" height="10" rx="1.5" fill="none" stroke="var(--marke,#0077B7)" stroke-width="1.5"/><path d="M286.5 238 V234.5 a3.5 3.5 0 0 1 7 0 V236" fill="none" stroke="var(--marke,#0077B7)" stroke-width="1.5"/>
+<text x="96" y="196" fill="var(--tinte-2,#4C5D6C)" font-size="11">liest</text>
+<text x="158" y="196" fill="var(--tinte-2,#4C5D6C)" font-size="11">schreibt</text>
+<text x="228" y="196" fill="var(--tinte-2,#4C5D6C)" font-size="11">schreibt</text>
+<text x="298" y="196" fill="var(--tinte-2,#4C5D6C)" font-size="11">liest</text>
+</svg>
