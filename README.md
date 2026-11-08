@@ -16,12 +16,16 @@ Produktive Domain: **https://ailectrify.io**
 
 ## Hosting
 
-Aktuell: Deploy auf Checkdomain (PHP nötig für `/api/anfrage.php`).
+**GitHub Pages** ist aktiv (Branch `main`, Custom Domain `ailectrify.io`).
 
-GitHub Pages allein reicht nicht, solange das Formular PHP nutzt. Mögliche nächste Schritte:
+| URL | Rolle |
+|-----|--------|
+| https://ailectrify.github.io/website/ | Preview (ohne Domain: CSS-Pfade kaputt, weil Root-Build) |
+| https://ailectrify.io | Ziel nach DNS-Umstellung |
 
-1. Versionierung und CI-Deploy auf Checkdomain
-2. Formular auf eine serverless API umstellen, dann GitHub Pages / Cloudflare Pages
+DNS-Schritte und Checkliste: [docs/dns-github-pages.md](docs/dns-github-pages.md).
+
+**Wichtig:** Solange DNS noch auf Checkdomain zeigt, bleibt die Live-Site dort. Nach dem Umzug auf Pages funktioniert `/api/anfrage.php` nicht mehr — Formular vorher ersetzen oder auf Subdomain belassen.
 
 ## Lokal ansehen
 
