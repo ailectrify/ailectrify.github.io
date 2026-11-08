@@ -2,9 +2,11 @@
 
 Statische Firmenwebsite von [Ailectrify GmbH](https://ailectrify.io) (Astro-Build).
 
+Lokales Verzeichnis und Git-Remote: **[`ailectrify/ailectrify.github.io`](https://github.com/ailectrify/ailectrify.github.io)**.
+
 ## Status
 
-Dieses Repository ist die **Arbeitskopie / Quelle** (gebauter Output + PHP-Formular).
+Gebauter Output (HTML/CSS/Assets) plus PHP-Formular-Endpoint.
 
 | Pfad | Zweck |
 |------|--------|
@@ -17,22 +19,11 @@ Dieses Repository ist die **Arbeitskopie / Quelle** (gebauter Output + PHP-Formu
 | Umgebung | URL | System |
 |----------|-----|--------|
 | **Produktion** | https://ailectrify.io | Checkdomain (Static + PHP) |
-| **Test** | https://ailectrify.github.io/ | GitHub Pages Root-Repo [`ailectrify.github.io`](https://github.com/ailectrify/ailectrify.github.io) |
+| **Test** | https://ailectrify.github.io/ | dieses Repo (GitHub Pages) |
 
-Das Projekt-Repo `website` wird **nicht** für Pages genutzt (`/website/` würde Root-Asset-Pfade brechen). Der Test läuft bewusst ohne Custom Domain, damit Produktion unberührt bleibt.
+Formular-Mails nur in Produktion. Auf der Test-URL ist `/api/anfrage.php` nicht nutzbar.
 
-Formular-Mails funktionieren nur in Produktion (Checkdomain). Auf der Test-URL schlägt `/api/anfrage.php` fehl bzw. ist nicht sinnvoll nutzbar.
-
-Optionale spätere Domain-Umstellung auf Pages: [docs/dns-github-pages.md](docs/dns-github-pages.md).
-
-## Sync Test-Hosting
-
-Nach Änderungen hier:
-
-```bash
-git push origin main
-git push pages main   # Remote → ailectrify/ailectrify.github.io
-```
+`git push` aktualisiert die Test-Site. Optionale spätere Domain-Umstellung: [docs/dns-github-pages.md](docs/dns-github-pages.md).
 
 ## Lokal ansehen
 
