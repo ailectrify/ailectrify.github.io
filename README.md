@@ -25,6 +25,8 @@ Formular-Mails nur in Produktion. Auf der Test-URL ist `/api/anfrage.php` nicht 
 
 `git push` aktualisiert die Test-Site.
 
+**Inhalt ändern (GitHub-Web):** Schritt-für-Schritt — [docs/anleitung-inhalt-aendern.md](docs/anleitung-inhalt-aendern.md).
+
 **Produktion (Checkdomain):** manuell per GitHub Action deployen — [docs/deploy-checkdomain.md](docs/deploy-checkdomain.md) (Actions → *Deploy Checkdomain*). Dafür SSH-Secrets setzen.
 
 Optionale spätere Domain-Umstellung auf Pages: [docs/dns-github-pages.md](docs/dns-github-pages.md).
