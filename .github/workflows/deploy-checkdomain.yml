@@ -1,0 +1,76 @@
+# Deploy der statischen Website + PHP-API per SSH/rsync nach Checkdomain.
+# Secrets: siehe docs/deploy-checkdomain.md
+name: Deploy Checkdomain
+
+on:
+  workflow_dispatch:
+    inputs:
+      delete_extraneous:
+        description: "rsync --delete (entfernt Dateien auf dem Server, die nicht im Repo sind)"
+        type: boolean
+        default: false
+  # Nach erfolgreichem Secret-Setup optional aktivieren:
+  # push:
+  #   branches: [main]
+
+concurrency:
+  group: deploy-checkdomain
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Start ssh-agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.CHECKDOMAIN_SSH_KEY }}
+
+      - name: Add host to known_hosts
+        env:
+          HOST: ${{ secrets.CHECKDOMAIN_HOST }}
+          PORT: ${{ secrets.CHECKDOMAIN_PORT }}
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          port="${PORT:-22}"
+          ssh-keyscan -p "$port" -H "$HOST" >> ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Rsync to Checkdomain
+        env:
+          HOST: ${{ secrets.CHECKDOMAIN_HOST }}
+          USER: ${{ secrets.CHECKDOMAIN_USER }}
+          PORT: ${{ secrets.CHECKDOMAIN_PORT }}
+          DEST: ${{ secrets.CHECKDOMAIN_PATH }}
+          DELETE: ${{ inputs.delete_extraneous }}
+        run: |
+          set -euo pipefail
+          port="${PORT:-22}"
+          if [ -z "${HOST:-}" ] || [ -z "${USER:-}" ] || [ -z "${DEST:-}" ]; then
+            echo "Missing secrets: CHECKDOMAIN_HOST, CHECKDOMAIN_USER, CHECKDOMAIN_PATH (and CHECKDOMAIN_SSH_KEY)."
+            exit 1
+          fi
+
+          rsync_opts=(-avz --human-readable)
+          if [ "${DELETE:-false}" = "true" ]; then
+            rsync_opts+=(--delete)
+          fi
+
+          # Repo-Metadaten und Doku nicht auf den Webspace legen.
+          rsync_opts+=(
+            --exclude '.git/'
+            --exclude '.github/'
+            --exclude '.gitignore'
+            --exclude 'README.md'
+            --exclude 'docs/'
+            --exclude '.DS_Store'
+          )
+
+          rsync "${rsync_opts[@]}" \
+            -e "ssh -p ${port} -o IdentitiesOnly=yes" \
+            ./ "${USER}@${HOST}:${DEST}/"

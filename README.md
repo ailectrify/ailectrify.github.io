@@ -23,7 +23,11 @@ Gebauter Output (HTML/CSS/Assets) plus PHP-Formular-Endpoint.
 
 Formular-Mails nur in Produktion. Auf der Test-URL ist `/api/anfrage.php` nicht nutzbar.
 
-`git push` aktualisiert die Test-Site. Optionale spätere Domain-Umstellung: [docs/dns-github-pages.md](docs/dns-github-pages.md).
+`git push` aktualisiert die Test-Site.
+
+**Produktion (Checkdomain):** manuell per GitHub Action deployen — [docs/deploy-checkdomain.md](docs/deploy-checkdomain.md) (Actions → *Deploy Checkdomain*). Dafür SSH-Secrets setzen.
+
+Optionale spätere Domain-Umstellung auf Pages: [docs/dns-github-pages.md](docs/dns-github-pages.md).
 
 ## Lokal ansehen
 
