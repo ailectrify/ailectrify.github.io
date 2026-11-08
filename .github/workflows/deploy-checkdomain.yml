@@ -24,44 +24,54 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Start ssh-agent
-        uses: webfactory/ssh-agent@v0.9.0
-        with:
-          ssh-private-key: ${{ secrets.CHECKDOMAIN_SSH_KEY }}
-
-      - name: Add host to known_hosts
+      - name: Prepare SSH key
         env:
-          HOST: ${{ secrets.CHECKDOMAIN_HOST }}
-          PORT: ${{ secrets.CHECKDOMAIN_PORT }}
+          CHECKDOMAIN_SSH_KEY: ${{ secrets.CHECKDOMAIN_SSH_KEY }}
         run: |
           set -euo pipefail
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
-          port="${PORT:-22}"
-          ssh-keyscan -p "$port" -H "$HOST" >> ~/.ssh/known_hosts
+          printf '%s\n' "$CHECKDOMAIN_SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+
+      - name: Add host to known_hosts
+        env:
+          SSH_HOST: ${{ secrets.CHECKDOMAIN_HOST }}
+          SSH_PORT: ${{ secrets.CHECKDOMAIN_PORT }}
+        run: |
+          set -euo pipefail
+          port="${SSH_PORT:-22}"
+          ssh-keyscan -p "$port" -H "$SSH_HOST" >> ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
 
       - name: Rsync to Checkdomain
         env:
-          HOST: ${{ secrets.CHECKDOMAIN_HOST }}
-          USER: ${{ secrets.CHECKDOMAIN_USER }}
-          PORT: ${{ secrets.CHECKDOMAIN_PORT }}
+          SSH_HOST: ${{ secrets.CHECKDOMAIN_HOST }}
+          SSH_USER: ${{ secrets.CHECKDOMAIN_USER }}
+          SSH_PORT: ${{ secrets.CHECKDOMAIN_PORT }}
           DEST: ${{ secrets.CHECKDOMAIN_PATH }}
           DELETE: ${{ inputs.delete_extraneous }}
         run: |
           set -euo pipefail
-          port="${PORT:-22}"
-          if [ -z "${HOST:-}" ] || [ -z "${USER:-}" ] || [ -z "${DEST:-}" ]; then
+          port="${SSH_PORT:-22}"
+          if [ -z "${SSH_HOST:-}" ] || [ -z "${SSH_USER:-}" ] || [ -z "${DEST:-}" ]; then
             echo "Missing secrets: CHECKDOMAIN_HOST, CHECKDOMAIN_USER, CHECKDOMAIN_PATH (and CHECKDOMAIN_SSH_KEY)."
             exit 1
           fi
+
+          # Kurztest der SSH-Anmeldung (ein Key, IdentitiesOnly)
+          ssh -i ~/.ssh/deploy_key -p "$port" \
+            -o IdentitiesOnly=yes \
+            -o PreferredAuthentications=publickey \
+            -o PasswordAuthentication=no \
+            -o BatchMode=yes \
+            "${SSH_USER}@${SSH_HOST}" 'echo ssh-ok'
 
           rsync_opts=(-avz --human-readable)
           if [ "${DELETE:-false}" = "true" ]; then
             rsync_opts+=(--delete)
           fi
 
-          # Repo-Metadaten und Doku nicht auf den Webspace legen.
           rsync_opts+=(
             --exclude '.git/'
             --exclude '.github/'
@@ -72,5 +82,5 @@ jobs:
           )
 
           rsync "${rsync_opts[@]}" \
-            -e "ssh -p ${port} -o IdentitiesOnly=yes" \
-            ./ "${USER}@${HOST}:${DEST}/"
+            -e "ssh -i ~/.ssh/deploy_key -p ${port} -o IdentitiesOnly=yes -o PreferredAuthentications=publickey -o PasswordAuthentication=no -o BatchMode=yes" \
+            ./ "${SSH_USER}@${SSH_HOST}:${DEST}/"
